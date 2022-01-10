@@ -1,0 +1,13 @@
+apiVersion: kustomize.toolkit.fluxcd.io/v1beta2
+kind: Kustomization
+metadata:
+  name: c1
+  namespace: flux-system
+spec:
+  interval: 5s
+  path: ./apps/base/nginx
+  prune: true
+  timeout: 3m0s
+  sourceRef:
+    kind: GitRepository
+    name: flux-system 
