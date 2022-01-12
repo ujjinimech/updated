@@ -5,4 +5,3 @@ resources:
   - bitnami-repo.yaml
   - namespace.yaml  
   - release.yaml
-  - postgre.realese.yml
