@@ -13,7 +13,7 @@ spec:
         name: bitnami
       version: 9.7.0  
   interval: 1m0s
-  releaseName: nginx-9.7.0
+  releaseName: nginx
   values:
     extraEnvVars:
       - name: FOO
