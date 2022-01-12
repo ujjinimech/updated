@@ -7,7 +7,7 @@ metadata:
 spec:
   chart:
     spec:
-      chart: nginx:9.7.0
+      chart: nginx
       sourceRef:
         kind: HelmRepository
         name: bitnami
