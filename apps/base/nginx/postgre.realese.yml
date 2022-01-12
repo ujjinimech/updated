@@ -8,11 +8,11 @@ metadata:
 spec:
   chart:
     spec:
-      chart: postgresql:10.15.0
+      chart: postgresql
       sourceRef:
         kind: HelmRepository
         name: bitnami
-  interval: 30s
+  interval: 1m0s
   releaseName: postgresql
   values:
     extraEnvVars:
