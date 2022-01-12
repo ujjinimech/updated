@@ -12,7 +12,6 @@ spec:
       sourceRef:
         kind: HelmRepository
         name: bitnami
-        tags: 10.15.0
   interval: 1m0s
   releaseName: postgresql
   values:
