@@ -2,22 +2,35 @@
 apiVersion: helm.toolkit.fluxcd.io/v2beta1
 kind: HelmRelease
 metadata:
-  name: nginx
+  name: nginx and postgresql
   namespace: flux-system
 spec:
-  chart:
-    spec:
-      chart: nginx
-      sourceRef:
-        kind: HelmRepository
-        name: bitnami
-      version: 9.7.0  
-  interval: 1m0s
-  releaseName: nginx
-  values:
-    extraEnvVars:
-      - name: FOO
-        value: BAR  
+ - chart:
+     spec:
+       chart: nginx
+       sourceRef:
+         kind: HelmRepository
+         name: bitnami
+       version: 9.7.0  
+   interval: 1m0s
+   releaseName: nginx
+   values:
+      extraEnvVars:
+        - name: FOO
+          value: BAR  
+        
+ - chart:
+     spec:
+       chart: postgresql
+       sourceRef:
+         kind: HelmRepository
+         name: bitnami  
+   interval: 1m0s
+   releaseName: postgresql
+   values:
+     extraEnvVars:
+       - name: FOO
+         value: BAR 
 
 
 
